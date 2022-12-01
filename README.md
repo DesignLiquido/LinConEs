@@ -1,6 +1,6 @@
 # LinConEs
 
-LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language). 
+LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language).
 
 Aqui é apenas o repositório da especificação da linguagem. Implementações ficam em outros repositórios da Design Líquido.
 
@@ -87,4 +87,28 @@ Tradução:
 ```sql
 DELETE FROM USUARIOS
 WHERE ID = 2
+```
+
+### Criação de tabela:
+
+```sql
+CRIAR TABELA clientes(
+    id INTEIRO NAO NULO CHAVEPRIMARIA AUTOINCREMENTO,
+    nome TEXTO(100) NAO NULO,
+    idade INTEIRO NAO NULO,
+    email TEXTO(255) NAO NULO,
+    ativo LOGICO NAO NULO
+  );
+```
+
+Tradução:
+
+```sql
+CREATE TABLE clientes(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    idade INTEGER NOT NULL,
+    email VARCHAR(255),
+    ativo BIT NOT NULL
+)
 ```
