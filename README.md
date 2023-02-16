@@ -1,5 +1,29 @@
 # LinConEs
 
+<p align="center">
+    <img src="./recursos/imagens/icone-lincones.svg" width="auto" height="281" />
+</p>
+
+<p align="center">
+    <a href="https://github.com/DesignLiquido/LinConEs/issues" target="_blank"><img src="https://img.shields.io/github/issues/Designliquido/LinConEs" /></a>
+    <img src="https://img.shields.io/github/stars/Designliquido/LinConEs" />
+    <img src="https://img.shields.io/github/forks/Designliquido/LinConEs" />
+    <img src="https://img.shields.io/github/license/Designliquido/LinConEs" />
+    <br />
+</p>
+
+<p align="center">
+    Acompanhe a Design Líquido nas redes sociais:
+</p>
+
+<p align="center">
+    <a href="https://twitter.com/designliquido" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=Twitter&color=1DA1F2&logo=Twitter&logoColor=FFFFFF&label=" /></a>
+    <a href="https://www.instagram.com/design.liquido" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=Instagram&color=E4405F&logo=Instagram&logoColor=FFFFFF&label=" /></a>
+    <a href="https://www.youtube.com/channel/UCJRn3B7r0aex6LCaOyrQtZQ" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=" /></a>
+    <a href="https://www.linkedin.com/company/design-liquido" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=" /></a>
+    <a href="https://www.tiktok.com/@designliquido" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=TikTok&color=000000&logo=TikTok&logoColor=FFFFFF&label=" /></a>
+</p>
+
 LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language). 
 
 Aqui é apenas o repositório da especificação da linguagem. Implementações ficam em outros repositórios da Design Líquido.
