@@ -1,7 +1,7 @@
 # LinConEs
 
 <p align="center">
-    <img src="./recursos/imagens/icone-lincones.svg" width="auto" height="281" />
+    <img src="./recursos/imagens/icone-lincones.png" width="auto" height="281" />
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language). 
 
-Aqui é apenas o repositório da especificação da linguagem. Implementações ficam em outros repositórios da Design Líquido.
+Aqui é apenas o repositório da especificação comum da linguagem. Implementações ficam em outros repositórios da Design Líquido, e demais especificidades de cada tecnologia também.
 
 ## Motivação
 
