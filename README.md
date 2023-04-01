@@ -136,3 +136,9 @@ CREATE TABLE clientes(
     ATIVO BOOLEAN NOT NULL
 );
 ```
+
+## Implementações
+
+- https://github.com/DesignLiquido/lincones-mysql
+- https://github.com/DesignLiquido/lincones-postgresql
+- https://github.com/DesignLiquido/lincones-sqlite
