@@ -69,6 +69,22 @@ FROM USUARIOS
 WHERE ID = 1
 ```
 
+### Alteração de coluna
+
+```sql
+ALTERAR TABELA usuarios
+ADICIONAR COLUNA email
+TEXTO(80)
+```
+
+Tradução:
+
+```sql
+ALTER TABLE usuarios
+ADD COLUMN email
+VARCHAR(80)
+```
+
 ### Inserção de dados
 
 ```sql
