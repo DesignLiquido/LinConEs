@@ -24,7 +24,7 @@
     <a href="https://www.tiktok.com/@designliquido" target="_blank"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=TikTok&color=000000&logo=TikTok&logoColor=FFFFFF&label=" /></a>
 </p>
 
-LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language). 
+LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language).
 
 Aqui é apenas o repositório da especificação comum da linguagem. Implementações ficam em outros repositórios da Design Líquido, e demais especificidades de cada tecnologia também.
 
@@ -69,12 +69,16 @@ FROM USUARIOS
 WHERE ID = 1
 ```
 
-### Alteração de coluna
+### Alterar Tabela
+
+O comando para alterar tabelas permite realizar diversas operações, como:
+
+### Adicionar Coluna:
 
 ```sql
 ALTERAR TABELA usuarios
 ADICIONAR COLUNA email
-TEXTO(80)
+TEXTO(80);
 ```
 
 Tradução:
@@ -82,7 +86,70 @@ Tradução:
 ```sql
 ALTER TABLE usuarios
 ADD COLUMN email
-VARCHAR(80)
+VARCHAR(80);
+```
+
+### Modificar Coluna:
+
+```sql
+ALTERAR TABELA usuarios
+MODIFICAR COLUNA nome
+TEXTO(100);
+```
+
+Tradução:
+
+```sql
+ALTER TABLE usuarios
+MODIFY COLUMN nome
+VARCHAR(100);
+```
+
+### Adicionar Restrição:
+
+```sql
+ALTERAR TABELA pedidos
+ADICIONAR RESTRIÇÃO chave_estrang
+CHAVE ESTRANGEIRA (cliente_id)
+REFERENCIAR clientes (id);
+```
+
+Tradução:
+
+```sql
+ALTER TABLE pedidos
+ADD CONSTRAINT chave_estrang
+FOREIGN KEY (cliente_id)
+REFERENCES clientes (id);
+```
+
+### Remover Coluna:
+
+```sql
+
+ALTERAR TABELA produtos
+REMOVER COLUNA descricao;
+```
+
+Tradução:
+
+```sql
+ALTER TABLE produtos
+DROP COLUMN descricao;
+```
+
+### Remover Restrição:
+
+```sql
+ALTERAR TABELA fornecedores
+REMOVER RESTRIÇÃO unique_nome;
+```
+
+Tradução:
+
+```sql
+ALTER TABLE fornecedores
+DROP CONSTRAINT unique_nome;
 ```
 
 ### Inserção de dados
@@ -133,10 +200,10 @@ WHERE ID = 2
 
 ```sql
 CRIAR TABELA clientes(
-    ID INTEIRO NAO NULO CHAVE PRIMARIA AUTO INCREMENTO, 
-    NOME TEXTO(100) NAO NULO, 
-    IDADE INTEIRO NAO NULO, 
-    EMAIL TEXTO(255) NULO, 
+    ID INTEIRO NAO NULO CHAVE PRIMARIA AUTO INCREMENTO,
+    NOME TEXTO(100) NAO NULO,
+    IDADE INTEIRO NAO NULO,
+    EMAIL TEXTO(255) NULO,
     ATIVO LOGICO NAO NULO
 );
 ```
@@ -145,10 +212,10 @@ Tradução:
 
 ```sql
 CREATE TABLE clientes(
-    ID INT NOT NULL PRIMARY KEY AUTOINCREMENT, 
-    NOME VARCHAR(100) NOT NULL, 
-    IDADE INT NOT NULL, 
-    EMAIL VARCHAR(255) NULL, 
+    ID INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    NOME VARCHAR(100) NOT NULL,
+    IDADE INT NOT NULL,
+    EMAIL VARCHAR(255) NULL,
     ATIVO BOOLEAN NOT NULL
 );
 ```
