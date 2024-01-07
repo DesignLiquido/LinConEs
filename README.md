@@ -73,7 +73,7 @@ WHERE ID = 1
 
 O comando para alterar tabelas permite realizar diversas operações, como:
 
-## Adicionar Coluna:
+### Adicionar Coluna:
 
 ```sql
 ALTERAR TABELA usuarios
@@ -89,7 +89,7 @@ ADD COLUMN email
 VARCHAR(80);
 ```
 
-## Modificar Coluna:
+### Modificar Coluna:
 
 ```sql
 ALTERAR TABELA usuarios
@@ -105,7 +105,7 @@ MODIFY COLUMN nome
 VARCHAR(100);
 ```
 
-## Adicionar Restrição:
+### Adicionar Restrição:
 
 ```sql
 ALTERAR TABELA pedidos
@@ -123,7 +123,7 @@ FOREIGN KEY (cliente_id)
 REFERENCES clientes (id);
 ```
 
-## Remover Coluna:
+### Remover Coluna:
 
 ```sql
 
@@ -138,7 +138,7 @@ ALTER TABLE produtos
 DROP COLUMN descricao;
 ```
 
-## Remover Restrição:
+### Remover Restrição:
 
 ```sql
 ALTERAR TABELA fornecedores
