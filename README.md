@@ -69,89 +69,6 @@ FROM USUARIOS
 WHERE ID = 1
 ```
 
-### Alterar Tabela
-
-O comando para alterar tabelas permite realizar diversas operações, como:
-
-### Adicionar Coluna:
-
-```sql
-ALTERAR TABELA usuarios
-ADICIONAR COLUNA email
-TEXTO(80);
-```
-
-Tradução:
-
-```sql
-ALTER TABLE usuarios
-ADD COLUMN email
-VARCHAR(80);
-```
-
-### Modificar Coluna:
-
-```sql
-ALTERAR TABELA usuarios
-MODIFICAR COLUNA nome
-TEXTO(100);
-```
-
-Tradução:
-
-```sql
-ALTER TABLE usuarios
-MODIFY COLUMN nome
-VARCHAR(100);
-```
-
-### Adicionar Restrição:
-
-```sql
-ALTERAR TABELA pedidos
-ADICIONAR RESTRIÇÃO chave_estrang
-CHAVE ESTRANGEIRA (cliente_id)
-REFERENCIAR clientes (id);
-```
-
-Tradução:
-
-```sql
-ALTER TABLE pedidos
-ADD CONSTRAINT chave_estrang
-FOREIGN KEY (cliente_id)
-REFERENCES clientes (id);
-```
-
-### Remover Coluna:
-
-```sql
-
-ALTERAR TABELA produtos
-REMOVER COLUNA descricao;
-```
-
-Tradução:
-
-```sql
-ALTER TABLE produtos
-DROP COLUMN descricao;
-```
-
-### Remover Restrição:
-
-```sql
-ALTERAR TABELA fornecedores
-REMOVER RESTRIÇÃO unique_nome;
-```
-
-Tradução:
-
-```sql
-ALTER TABLE fornecedores
-DROP CONSTRAINT unique_nome;
-```
-
 ### Inserção de dados
 
 ```sql
@@ -219,6 +136,110 @@ CREATE TABLE clientes(
     ATIVO BOOLEAN NOT NULL
 );
 ```
+
+### Alteração de Tabelas
+
+O comando para alterar tabelas permite realizar diversas operações, como:
+
+### Adicionar Coluna
+
+```sql
+ALTERAR TABELA usuarios
+ADICIONAR COLUNA email TEXTO(80);
+```
+
+Tradução:
+
+```sql
+ALTER TABLE USUARIOS
+ADD COLUMN email VARCHAR(80);
+```
+
+### Modificar Coluna
+
+```sql
+ALTERAR TABELA usuarios
+MODIFICAR COLUNA nome
+TEXTO(100);
+```
+
+Tradução:
+
+```sql
+ALTER TABLE usuarios
+MODIFY COLUMN nome
+VARCHAR(100);
+```
+
+### Remover Coluna
+
+```sql
+ALTERAR TABELA produtos
+EXCLUIR COLUNA descricao;
+```
+
+Ou
+
+```sql
+ALTERAR TABELA produtos
+REMOVER COLUNA descricao;
+```
+
+Tradução:
+
+```sql
+ALTER TABLE produtos
+DROP COLUMN descricao;
+```
+
+### Renomear Coluna
+
+```sql
+ALTERAR TABELA usuarios
+RENOMEAR COLUNA email PARA correio_eletronico;
+```
+
+Tradução:
+
+```sql
+ALTER TABLE usuarios
+RENAME COLUMN email TO correio_eletronico;
+```
+
+Importante: o comando de renomear coluna tem diferentes implementações dependendo da tecnologia. 
+
+### Adicionar Restrição
+
+```sql
+ALTERAR TABELA pedidos
+ADICIONAR RESTRIÇÃO chave_estrang
+CHAVE ESTRANGEIRA (cliente_id)
+REFERENCIA clientes (id);
+```
+
+Tradução:
+
+```sql
+ALTER TABLE pedidos
+ADD CONSTRAINT chave_estrang
+FOREIGN KEY (cliente_id)
+REFERENCES clientes (id);
+```
+
+### Remover Restrição
+
+```sql
+ALTERAR TABELA fornecedores
+REMOVER RESTRIÇÃO unique_nome;
+```
+
+Tradução:
+
+```sql
+ALTER TABLE fornecedores
+DROP CONSTRAINT unique_nome;
+```
+
 
 ## Implementações
 
