@@ -102,7 +102,14 @@ WHERE ID = 2
 ### Exclusão de dados
 
 ```sql
-EXCLUIR USUARIOS
+EXCLUIR DE USUARIOS
+ONDE ID = 2
+```
+
+Ou
+
+```sql
+EXCLUIR EM USUARIOS
 ONDE ID = 2
 ```
 
