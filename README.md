@@ -26,7 +26,7 @@
 
 LinConEs = Linguagem de Consulta Estruturada, ou SQL em português (Structured Query Language).
 
-Aqui é apenas o repositório da especificação comum da linguagem. Implementações ficam em outros repositórios da Design Líquido, e demais especificidades de cada tecnologia também.
+Aqui é apenas o repositório da especificação comum da linguagem, bem como uma listagem de todos os recursos que envolvem a linguagem. Implementações ficam em outros repositórios da Design Líquido, e demais especificidades de cada tecnologia também.
 
 ## Motivação
 
@@ -34,6 +34,10 @@ A mesma das outras linguagens de programação em português da Design Líquido:
 
 - Melhorar o acesso a leigos;
 - Quebrar a barreira do inglês;
+
+## Demonstração online
+
+LinConEs tem uma demonstração online usando IndexedDB: https://designliquido.github.io/lincones-demo-web.
 
 ## Especificação
 
