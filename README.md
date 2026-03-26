@@ -75,8 +75,17 @@ WHERE ID = 1
 
 ### Inserção de dados
 
+Com lista de colunas explícita:
+
 ```sql
 INSERIR EM USUARIOS (NOME, EMAIL)
+VALORES ("Irmão do Jorel", "irmao@jorel.com")
+```
+
+Sem lista de colunas (implícita, valores na ordem de criação da tabela):
+
+```sql
+INSERIR EM USUARIOS
 VALORES ("Irmão do Jorel", "irmao@jorel.com")
 ```
 
