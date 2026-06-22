@@ -159,9 +159,9 @@ CREATE TABLE clientes(
 
 ### Alteração de Tabelas
 
-O comando para alterar tabelas permite realizar diversas operações, como:
+O comando `ALTERAR TABELA` permite realizar diversas operações sobre colunas e restrições.
 
-### Adicionar Coluna
+#### Adicionar Coluna
 
 ```sql
 ALTERAR TABELA usuarios
@@ -171,34 +171,39 @@ ADICIONAR COLUNA email TEXTO(80);
 Tradução:
 
 ```sql
-ALTER TABLE USUARIOS
+ALTER TABLE usuarios
 ADD COLUMN email VARCHAR(80);
 ```
 
-### Modificar Coluna
+#### Adicionar Coluna com restrição NOT NULL
 
 ```sql
-ALTERAR TABELA usuarios
-MODIFICAR COLUNA nome
-TEXTO(100);
+ALTERAR TABELA produtos
+ADICIONAR COLUNA categoria TEXTO NAO NULO;
 ```
 
 Tradução:
 
 ```sql
-ALTER TABLE usuarios
-MODIFY COLUMN nome
-VARCHAR(100);
+ALTER TABLE produtos
+ADD COLUMN categoria TEXT NOT NULL;
 ```
 
-### Remover Coluna
+#### Alterar Coluna
 
 ```sql
 ALTERAR TABELA produtos
-EXCLUIR COLUNA descricao;
+ALTERAR COLUNA preco NUMERO;
 ```
 
-Ou
+Tradução:
+
+```sql
+ALTER TABLE produtos
+ALTER COLUMN preco NUMERIC;
+```
+
+#### Remover Coluna
 
 ```sql
 ALTERAR TABELA produtos
@@ -212,7 +217,7 @@ ALTER TABLE produtos
 DROP COLUMN descricao;
 ```
 
-### Renomear Coluna
+#### Renomear Coluna
 
 ```sql
 ALTERAR TABELA usuarios
@@ -226,9 +231,9 @@ ALTER TABLE usuarios
 RENAME COLUMN email TO correio_eletronico;
 ```
 
-Importante: o comando de renomear coluna tem diferentes implementações dependendo da tecnologia. 
+> Importante: a implementação de renomear colunas varia conforme o banco de dados.
 
-### Adicionar Restrição
+#### Adicionar Restrição
 
 ```sql
 ALTERAR TABELA pedidos
@@ -246,7 +251,7 @@ FOREIGN KEY (cliente_id)
 REFERENCES clientes (id);
 ```
 
-### Remover Restrição
+#### Remover Restrição
 
 ```sql
 ALTERAR TABELA fornecedores
